@@ -16,4 +16,9 @@ class Api::DogsController < ApplicationController
       render json: { message: "You must be logged in in order to, uh, 'create' new dogs." }
     end
   end
+
+  def show
+    @dog = Dog.find_by(id: params[:id])
+    render 'show.json.jb'
+  end
 end
