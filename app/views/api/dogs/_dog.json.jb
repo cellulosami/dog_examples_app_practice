@@ -4,5 +4,5 @@
   age: dog.age,
   breed: dog.breed,
   user_id: dog.user_id,
-  images: dog.images
+  images: dog.images.map { |image| image.url}
 }
