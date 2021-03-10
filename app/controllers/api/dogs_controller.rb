@@ -4,10 +4,10 @@ class Api::DogsController < ApplicationController
       @dog = Dog.new(
         name: params[:name],
         age: params[:age],
-        breed: params[:breed]
+        breed: params[:breed],
+        user_id: current_user.id
       )
       @dog.save
-      p current_user
       render "show.json.jb"
     else
       render json: { message: "You must be logged in in order to, uh, 'create' new dogs." }
