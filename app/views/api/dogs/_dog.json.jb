@@ -3,5 +3,6 @@
   name: dog.name,
   age: dog.age,
   breed: dog.breed,
-  user_id: dog.user_id
+  user_id: dog.user_id,
+  images: dog.images
 }
